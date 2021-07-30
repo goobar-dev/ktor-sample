@@ -20,7 +20,7 @@ fun Application.configureStatusPages() {
                 }
             }
         }
-        status(HttpStatusCode.Unauthorized) {
+        status(HttpStatusCode.Forbidden) {
             call.respondText("Whoa, whoa, whoa... what are you trying to do?")
         }
     }
