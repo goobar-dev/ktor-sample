@@ -1,0 +1,6 @@
+{
+  "name": "Hello Ktor World!",
+  "description": "A sample Ktor project",
+  "image": "heroku/java",
+  "addons": [ "heroku-postgresql" ]
+}
