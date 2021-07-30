@@ -5,7 +5,7 @@ import io.ktor.server.netty.*
 import dev.goobar.plugins.*
 
 fun main() {
-    embeddedServer(Netty, port = 8081, host = "0.0.0.0", watchPaths = listOf("classes")) {
+    embeddedServer(Netty, port = 8080, host = "0.0.0.0", watchPaths = listOf("classes")) {
         configureStatusPages()
         configureAuthentication()
         configureHeaders()
