@@ -19,10 +19,17 @@ import dev.goobar.plugins.*
 class ApplicationTest {
     @Test
     fun testRoot() {
-        withTestApplication({ configureRouting() }) {
+        withTestApplication({
+            configureStatusPages()
+            configureAuthentication()
+            configureHeaders()
+            configureMonitoring()
+            configureSerialization()
+            configureRouting()
+        }) {
             handleRequest(HttpMethod.Get, "/").apply {
                 assertEquals(HttpStatusCode.OK, response.status())
-                assertEquals("Hello World!", response.content)
+                assertEquals("Hello World", response.content)
             }
         }
     }
